@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://chxp4yr0w7lob"]
+
+[ext_resource type="Script" uid="uid://lwhdu6ojtt2t" path="res://scripts/planet.gd" id="1_h2yge"]
+[ext_resource type="Texture2D" uid="uid://b3x8hsfhpect2" path="res://sprites/prince.png" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://bihdwqfin3c01" path="res://sprites/rose.png" id="2_1bvp3"]
+[ext_resource type="Script" uid="uid://c2hfi7k0v08x4" path="res://scripts/prince.gd" id="4_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://byg4u2a3bb2yk" path="res://sprites/well.png" id="5_lquwl"]
+
+[sub_resource type="Gradient" id="Gradient_0xm2m"]
+interpolation_mode = 1
+colors = PackedColorArray(0.909804, 0.67451, 0.572549, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_h2yge"]
+gradient = SubResource("Gradient_0xm2m")
+width = 512
+height = 512
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[node name="Root" type="Node2D"]
+
+[node name="Planet" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = SubResource("GradientTexture2D_h2yge")
+script = ExtResource("1_h2yge")
+
+[node name="Prince" type="Sprite2D" parent="Planet"]
+z_index = 5
+position = Vector2(0, -302)
+texture = ExtResource("1_ig7tw")
+script = ExtResource("4_1bvp3")
+
+[node name="Rose" type="Sprite2D" parent="Planet"]
+unique_name_in_owner = true
+z_index = 1
+position = Vector2(79, -270)
+rotation = 0.0349066
+texture = ExtResource("2_1bvp3")
+
+[node name="Well" type="Sprite2D" parent="Planet"]
+unique_name_in_owner = true
+z_index = 1
+position = Vector2(-134, -245)
+texture = ExtResource("5_lquwl")
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(6, -300)
+zoom = Vector2(1.5, 1.5)
