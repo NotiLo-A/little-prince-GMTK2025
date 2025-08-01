@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://chxp4yr0w7lob"]
+[gd_scene load_steps=11 format=3 uid="uid://chxp4yr0w7lob"]
 
 [ext_resource type="Script" uid="uid://lwhdu6ojtt2t" path="res://scripts/planet.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://b3x8hsfhpect2" path="res://sprites/prince.png" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://bihdwqfin3c01" path="res://sprites/rose.png" id="2_1bvp3"]
 [ext_resource type="Script" uid="uid://c2hfi7k0v08x4" path="res://scripts/prince.gd" id="4_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://byg4u2a3bb2yk" path="res://sprites/well.png" id="5_lquwl"]
+[ext_resource type="Texture2D" uid="uid://xshfhsqdpo4o" path="res://sprites/moon.png" id="6_5vw27"]
 [ext_resource type="Texture2D" uid="uid://dn54d1yqdaod3" path="res://icon.svg" id="6_7mycd"]
 [ext_resource type="Texture2D" uid="uid://duv6rjcwodjb5" path="res://sprites/sky.png" id="6_272bh"]
 
@@ -30,7 +31,7 @@ script = ExtResource("1_h2yge")
 
 [node name="Prince" type="Sprite2D" parent="Planet"]
 z_index = 5
-position = Vector2(0, -604)
+position = Vector2(0, -626)
 scale = Vector2(2, 2)
 texture = ExtResource("1_ig7tw")
 script = ExtResource("4_1bvp3")
@@ -38,7 +39,7 @@ script = ExtResource("4_1bvp3")
 [node name="Rose" type="Sprite2D" parent="Planet"]
 unique_name_in_owner = true
 z_index = 1
-position = Vector2(158, -540)
+position = Vector2(164, -554)
 rotation = 0.0349066
 scale = Vector2(2, 2)
 texture = ExtResource("2_1bvp3")
@@ -46,13 +47,17 @@ texture = ExtResource("2_1bvp3")
 [node name="Well" type="Sprite2D" parent="Planet"]
 unique_name_in_owner = true
 z_index = 1
-position = Vector2(-268, -490)
+position = Vector2(-278, -500)
 scale = Vector2(2, 2)
 texture = ExtResource("5_lquwl")
 
+[node name="Sprite2D" type="Sprite2D" parent="Planet"]
+scale = Vector2(2.1, 2.1)
+texture = ExtResource("6_5vw27")
+
 [node name="Camera" type="Camera2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(6, -300)
+position = Vector2(5, -308)
 zoom = Vector2(1.5, 1.5)
 
 [node name="Background" type="CanvasLayer" parent="."]
