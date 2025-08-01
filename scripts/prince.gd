@@ -27,7 +27,7 @@ func _process(delta: float) -> void:
 
 func update_position(delta: float) -> void:
 	var normalized_diff = wrapf(rotation - target_rotation, -PI, PI)
-	if not target_reached:
+	if !target_reached:
 		if normalized_diff > 0:
 			rotation -= walk_speed * delta
 			flip_h = true
