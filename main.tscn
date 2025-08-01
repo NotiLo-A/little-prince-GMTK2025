@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://chxp4yr0w7lob"]
+[gd_scene load_steps=9 format=3 uid="uid://chxp4yr0w7lob"]
 
 [ext_resource type="Script" uid="uid://lwhdu6ojtt2t" path="res://scripts/planet.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://b3x8hsfhpect2" path="res://sprites/prince.png" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://bihdwqfin3c01" path="res://sprites/rose.png" id="2_1bvp3"]
 [ext_resource type="Script" uid="uid://c2hfi7k0v08x4" path="res://scripts/prince.gd" id="4_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://byg4u2a3bb2yk" path="res://sprites/well.png" id="5_lquwl"]
+[ext_resource type="Texture2D" uid="uid://duv6rjcwodjb5" path="res://sprites/sky.png" id="6_7mycd"]
 
 [sub_resource type="Gradient" id="Gradient_0xm2m"]
 interpolation_mode = 1
@@ -43,6 +44,14 @@ unique_name_in_owner = true
 z_index = 1
 position = Vector2(-134, -245)
 texture = ExtResource("5_lquwl")
+
+[node name="sky" type="Sprite2D" parent="."]
+z_index = -1
+texture_repeat = 2
+position = Vector2(0, -300)
+texture = ExtResource("6_7mycd")
+region_enabled = true
+region_rect = Rect2(0, 0, 900, 500)
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(6, -300)
