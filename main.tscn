@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://chxp4yr0w7lob"]
+[gd_scene load_steps=9 format=3 uid="uid://chxp4yr0w7lob"]
 
 [ext_resource type="Script" uid="uid://lwhdu6ojtt2t" path="res://scripts/planet.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://b3x8hsfhpect2" path="res://sprites/prince.png" id="1_ig7tw"]
@@ -9,51 +9,30 @@
 [ext_resource type="Texture2D" uid="uid://dn54d1yqdaod3" path="res://icon.svg" id="6_7mycd"]
 [ext_resource type="Texture2D" uid="uid://duv6rjcwodjb5" path="res://sprites/sky.png" id="6_272bh"]
 
-[sub_resource type="Gradient" id="Gradient_0xm2m"]
-interpolation_mode = 1
-colors = PackedColorArray(0.909804, 0.67451, 0.572549, 1, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_h2yge"]
-gradient = SubResource("Gradient_0xm2m")
-width = 1024
-height = 1024
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(0.5, 0)
-
 [node name="Root" type="Node2D"]
 
 [node name="Planet" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-scale = Vector2(0.5, 0.5)
-texture = SubResource("GradientTexture2D_h2yge")
+texture = ExtResource("6_5vw27")
 script = ExtResource("1_h2yge")
 
 [node name="Prince" type="Sprite2D" parent="Planet"]
 z_index = 5
-position = Vector2(0, -626)
-scale = Vector2(2, 2)
+position = Vector2(0, -302)
 texture = ExtResource("1_ig7tw")
 script = ExtResource("4_1bvp3")
 
 [node name="Rose" type="Sprite2D" parent="Planet"]
 unique_name_in_owner = true
 z_index = 1
-position = Vector2(164, -554)
-rotation = 0.0349066
-scale = Vector2(2, 2)
+position = Vector2(68, -269)
 texture = ExtResource("2_1bvp3")
 
 [node name="Well" type="Sprite2D" parent="Planet"]
 unique_name_in_owner = true
 z_index = 1
-position = Vector2(-278, -500)
-scale = Vector2(2, 2)
+position = Vector2(-135, -241)
 texture = ExtResource("5_lquwl")
-
-[node name="Sprite2D" type="Sprite2D" parent="Planet"]
-scale = Vector2(2.1, 2.1)
-texture = ExtResource("6_5vw27")
 
 [node name="Camera" type="Camera2D" parent="."]
 unique_name_in_owner = true
@@ -84,7 +63,7 @@ stretch_mode = 1
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="Control" type="Control" parent="UI"]
+[node name="ControlRoot" type="Control" parent="UI"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -94,7 +73,7 @@ offset_bottom = -648.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Icon" type="TextureRect" parent="UI/Control"]
+[node name="Icon" type="TextureRect" parent="UI/ControlRoot"]
 layout_mode = 0
 offset_right = 128.0
 offset_bottom = 128.0
