@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cqt4rrvlepcb" path="res://scripts/main_menu.gd" id="1_wu84c"]
 [ext_resource type="Texture2D" uid="uid://btseyiwqf4rvj" path="res://sprites/sky_MM.png" id="2_8ln24"]
 [ext_resource type="Texture2D" uid="uid://xshfhsqdpo4o" path="res://sprites/moon.png" id="3_rtw2f"]
-[ext_resource type="Script" uid="uid://u5nlpg27q6ex" path="res://scripts/moon_2.gd" id="4_oa1go"]
+[ext_resource type="Script" uid="uid://u5nlpg27q6ex" path="res://scripts/main_menu_planet.gd" id="4_oa1go"]
 [ext_resource type="FontFile" uid="uid://7v5w2d0bkk43" path="res://fonts/Pixelon.ttf" id="5_8ln24"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ow34m"]
