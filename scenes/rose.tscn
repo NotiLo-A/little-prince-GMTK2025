@@ -1,16 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://oyfwu2kokscm"]
+[gd_scene load_steps=7 format=3 uid="uid://oyfwu2kokscm"]
 
-[ext_resource type="Texture2D" uid="uid://bihdwqfin3c01" path="res://sprites/rose.png" id="1_o3jgc"]
+[ext_resource type="Texture2D" uid="uid://bihdwqfin3c01" path="res://sprites/rose_1.png" id="1_o3jgc"]
 [ext_resource type="Script" uid="uid://bbnx2nl2yx73x" path="res://scripts/rose.gd" id="2_abck2"]
 [ext_resource type="Script" uid="uid://y2782p3g3lvy" path="res://scripts/change_cursor_on_hover.gd" id="3_83it7"]
+[ext_resource type="Texture2D" uid="uid://dxh6jcnus2cru" path="res://sprites/rose_2.png" id="3_niv8o"]
+[ext_resource type="Texture2D" uid="uid://by58htpkcp6mr" path="res://sprites/rose_3.png" id="4_7bokt"]
+[ext_resource type="PackedScene" uid="uid://dxp0ihbjxot5o" path="res://scenes/off_screen_updater.tscn" id="4_abck2"]
 
-[node name="Rose" type="Sprite2D" groups=["interactive"]]
+[node name="Rose" type="Sprite2D" node_paths=PackedStringArray("sprite") groups=["interactive"]]
 z_index = 1
 texture = ExtResource("1_o3jgc")
 script = ExtResource("2_abck2")
+textures = Array[Texture]([ExtResource("1_o3jgc"), ExtResource("3_niv8o"), ExtResource("4_7bokt")])
+sprite = NodePath(".")
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("3_83it7")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PackedVector2Array(-31, 23, 20, 35, 23, 26, 15, 20, 26, -21, 21, -33, 5, -39, -15, -29, -17, 12, -29, 16)
+
+[node name="OffScreenUpdater" parent="." instance=ExtResource("4_abck2")]
+
+[connection signal="update_state" from="OffScreenUpdater" to="." method="_on_update_state"]
