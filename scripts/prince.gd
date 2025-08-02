@@ -7,14 +7,16 @@ var item_in_hands: Node
 var start_pos: Vector2
 var target_reached := true
 var target_rotation := 0.0
+var planet: Sprite2D
 #var is_wątering_can_full := false
 
 func _ready() -> void:
+	planet = $".."
 	start_pos = position
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("use"):
-		var mouse_pos: Vector2 = %Planet.get_local_mouse_position()
+		var mouse_pos: Vector2 = planet.get_local_mouse_position()
 		target_rotation = -mouse_pos.angle_to(Vector2.UP)
 		target_reached = false
 	update_position(delta)
@@ -39,7 +41,7 @@ func update_position(delta: float) -> void:
 			print("target_reached")
 			target_reached = true
 	rotation = clamp(
-		rotation + %Planet.rotation, -position_limit, position_limit
-	) - %Planet.rotation
+		rotation + planet.rotation, -position_limit, position_limit
+	) - planet.rotation
 	# wierd ass correction because of the long scarf at the side of the sprite
 	position = start_pos.rotated(rotation + (.05 if flip_h else -.05))
