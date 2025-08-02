@@ -46,7 +46,7 @@ texture = ExtResource("5_lquwl")
 script = ExtResource("8_efxa6")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Planet/Well/Area2D"]
-polygon = PackedVector2Array(-63, -23, -39, 19, -46, 25, -32, 50, 45, 6, 28, -32, 41, -39, 40, -46, 28, -42, 18, -65, -5, -56, -9, -63, -55, -38, -52, -30)
+polygon = PackedVector2Array(-63, -23, -46, 25, -32, 50, 45, 6, 41, -39, 40, -46, 18, -65, -9, -63, -55, -38)
 
 [node name="Camera" type="Camera2D" parent="."]
 unique_name_in_owner = true
