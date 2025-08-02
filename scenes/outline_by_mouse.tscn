@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://7ke4exb4uac6"]
 
-[ext_resource type="Shader" uid="uid://bo8tcgr3kp0xu" path="res://shaders/outline.gdshader" id="1_qk4dj"]
-[ext_resource type="Script" uid="uid://du15bnx17fd3" path="res://scripts/outline_by_mouse.gd" id="2_ud78j"]
+[ext_resource type="Shader" path="res://shaders/outline.gdshader" id="1_qk4dj"]
+[ext_resource type="Script" path="res://scripts/outline_by_mouse.gd" id="2_ud78j"]
 
 [sub_resource type="Gradient" id="Gradient_wdyaw"]
 
