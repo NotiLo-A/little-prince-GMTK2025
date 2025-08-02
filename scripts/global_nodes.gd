@@ -1,4 +1,4 @@
 extends Node
 
-var prince: Sprite2D
+var prince: Prince
 var planet: Sprite2D

@@ -1,4 +1,4 @@
-extends Sprite2D
+class_name Prince extends Sprite2D
 
 const walk_speed := 0.5 # rads/s
 const position_limit = 1.3 # +-rads
