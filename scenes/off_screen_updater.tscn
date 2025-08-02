@@ -1,7 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dxp0ihbjxot5o"]
+[gd_scene load_steps=2 format=3 uid="uid://c7475gmlrw2sn"]
 
-[ext_resource type="Script" uid="uid://bofxvfmupeifd" path="res://off_screen_updater.gd" id="1_hj3eg"]
+[ext_resource type="Script" path="res://off_screen_updater.gd" id="1_hj3eg"]
 
 [node name="OffScreenUpdater" type="Node"]
 script = ExtResource("1_hj3eg")
-metadata/_custom_type_script = "uid://bofxvfmupeifd"
