@@ -7,4 +7,6 @@ var index := 0
 
 func _on_update_state() -> void:
 	index += 1
+	index = clamp(index, 0, textures.size() - 1);
+
 	sprite.texture = textures[index]
