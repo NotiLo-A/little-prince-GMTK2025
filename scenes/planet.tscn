@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7eadlejykint"]
+
+[ext_resource type="Texture2D" uid="uid://xshfhsqdpo4o" path="res://sprites/moon.png" id="1_48b8c"]
+[ext_resource type="Script" uid="uid://lwhdu6ojtt2t" path="res://scripts/planet.gd" id="2_3s4jt"]
+[ext_resource type="PackedScene" uid="uid://cnv4ph1tjelmg" path="res://scenes/prince.tscn" id="3_1wmcx"]
+[ext_resource type="PackedScene" uid="uid://oyfwu2kokscm" path="res://scenes/rose.tscn" id="4_m5dqw"]
+[ext_resource type="PackedScene" uid="uid://64a1vpwbdjqw" path="res://scenes/well.tscn" id="5_8dfcq"]
+
+[node name="Planet" type="Sprite2D"]
+texture = ExtResource("1_48b8c")
+script = ExtResource("2_3s4jt")
+
+[node name="Prince" parent="." instance=ExtResource("3_1wmcx")]
+position = Vector2(0, -302)
+
+[node name="Rose" parent="." instance=ExtResource("4_m5dqw")]
+unique_name_in_owner = true
+position = Vector2(70, -269)
+
+[node name="Well" parent="." instance=ExtResource("5_8dfcq")]
+unique_name_in_owner = true
+position = Vector2(-135, -241)

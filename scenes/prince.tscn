@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnv4ph1tjelmg"]
+
+[ext_resource type="Texture2D" uid="uid://b3x8hsfhpect2" path="res://sprites/prince.png" id="1_8jjri"]
+[ext_resource type="Script" uid="uid://c2hfi7k0v08x4" path="res://scripts/prince.gd" id="2_k76dv"]
+
+[node name="Prince" type="Sprite2D"]
+z_index = 5
+texture = ExtResource("1_8jjri")
+script = ExtResource("2_k76dv")
