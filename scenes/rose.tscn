@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://bihdwqfin3c01" path="res://sprites/rose_1.png" id="1_o3jgc"]
 [ext_resource type="Script" uid="uid://bbnx2nl2yx73x" path="res://scripts/rose.gd" id="2_abck2"]
-[ext_resource type="Script" path="res://scripts/change_cursor_on_hover.gd" id="3_83it7"]
+[ext_resource type="Script" uid="uid://du15bnx17fd3" path="res://scripts/outline_by_mouse.gd" id="3_83it7"]
 [ext_resource type="Texture2D" uid="uid://dxh6jcnus2cru" path="res://sprites/rose_2.png" id="3_niv8o"]
 [ext_resource type="Texture2D" uid="uid://by58htpkcp6mr" path="res://sprites/rose_3.png" id="4_7bokt"]
-[ext_resource type="PackedScene" uid="uid://dxp0ihbjxot5o" path="res://scenes/off_screen_updater.tscn" id="4_abck2"]
+[ext_resource type="PackedScene" uid="uid://c7475gmlrw2sn" path="res://scenes/off_screen_updater.tscn" id="4_abck2"]
 
 [node name="Rose" type="Sprite2D" node_paths=PackedStringArray("sprite") groups=["interactive"]]
 z_index = 1
