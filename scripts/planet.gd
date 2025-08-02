@@ -1,15 +1,10 @@
 extends Sprite2D
 
 @export var day_length := 100.0 # seconds
-
-var rotation_speed: float
+var rotation_speed := 2 * PI / day_length # rad/s
 
 func _ready() -> void:
-<<<<<<< HEAD
 	GlobalNodes.planet = self
-=======
-	rotation_speed = 2 * PI / day_length # rad/s
->>>>>>> refs/remotes/origin/main
 	for node in get_tree().get_nodes_in_group("interactive"):
 		node.add_child(preload("res://scenes/outline_by_mouse.tscn").instantiate())
 
