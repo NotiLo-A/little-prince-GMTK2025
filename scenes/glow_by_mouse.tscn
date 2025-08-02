@@ -1,14 +1,65 @@
-[gd_scene load_steps=4 format=3 uid="uid://7ke4exb4uac6"]
+[gd_scene load_steps=7 format=3 uid="uid://7ke4exb4uac6"]
 
 [ext_resource type="Shader" uid="uid://bo8tcgr3kp0xu" path="res://shaders/glow.gdshader" id="1_wdyaw"]
 [ext_resource type="Script" uid="uid://du15bnx17fd3" path="res://scripts/glow_by_mouse.gd" id="2_1kc6k"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4c57u"]
 shader = ExtResource("1_wdyaw")
-shader_parameter/alpha = 0.0
+
+[sub_resource type="Animation" id="Animation_wdyaw"]
+resource_name = "glow_animation"
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.233333, -1.59942, -1.5, -0.166667, -0.216374, 0.1, 0, 1.5, -0.0666667, -0.292398, 0.1, -0.0584795, 0, -0.0666667, 1.5, 0.0666667, -0.5),
+"times": PackedFloat32Array(0, 0.466667, 0.766667, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.1, -0.576023, -0.98538, -0.0666667, -0.192982, 0.1, 0.391813, 1.0614, -0.133333, -0.614035, 0.1, 0, 0, -0.133333, 0.827485, 0.0666667, -0.5),
+"times": PackedFloat32Array(0, 0.266667, 0.666667, 1)
+}
+
+[sub_resource type="Animation" id="Animation_1kc6k"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_blnnw"]
+_data = {
+&"RESET": SubResource("Animation_1kc6k"),
+&"glow_animation": SubResource("Animation_wdyaw")
+}
 
 [node name="GlowByMouse" type="Sprite2D"]
 show_behind_parent = true
 material = SubResource("ShaderMaterial_4c57u")
 scale = Vector2(1.05, 1.05)
 script = ExtResource("2_1kc6k")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_blnnw")
+}
+autoplay = "glow_animation"

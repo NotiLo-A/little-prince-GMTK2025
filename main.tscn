@@ -1,14 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://chxp4yr0w7lob"]
+[gd_scene load_steps=10 format=3 uid="uid://chxp4yr0w7lob"]
 
 [ext_resource type="Script" uid="uid://lwhdu6ojtt2t" path="res://scripts/planet.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://b3x8hsfhpect2" path="res://sprites/prince.png" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://bihdwqfin3c01" path="res://sprites/rose.png" id="2_1bvp3"]
 [ext_resource type="Script" uid="uid://c2hfi7k0v08x4" path="res://scripts/prince.gd" id="4_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://byg4u2a3bb2yk" path="res://sprites/well.png" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://bbnx2nl2yx73x" path="res://scripts/rose.gd" id="6_4c57u"]
 [ext_resource type="Texture2D" uid="uid://xshfhsqdpo4o" path="res://sprites/moon.png" id="6_5vw27"]
-[ext_resource type="Texture2D" uid="uid://dn54d1yqdaod3" path="res://icon.svg" id="6_7mycd"]
 [ext_resource type="Texture2D" uid="uid://duv6rjcwodjb5" path="res://sprites/sky.png" id="6_272bh"]
-[ext_resource type="PackedScene" uid="uid://7ke4exb4uac6" path="res://scenes/glow_by_mouse.tscn" id="7_4c57u"]
 [ext_resource type="Script" uid="uid://y2782p3g3lvy" path="res://scripts/change_cursor_on_hover.gd" id="8_efxa6"]
 
 [node name="Root" type="Node2D"]
@@ -24,27 +23,24 @@ position = Vector2(0, -302)
 texture = ExtResource("1_ig7tw")
 script = ExtResource("4_1bvp3")
 
-[node name="Rose" type="Sprite2D" parent="Planet"]
+[node name="Rose" type="Sprite2D" parent="Planet" groups=["interactive"]]
 unique_name_in_owner = true
 z_index = 1
-position = Vector2(68, -269)
+position = Vector2(70, -269)
 texture = ExtResource("2_1bvp3")
-
-[node name="GlowByMouse" parent="Planet/Rose" instance=ExtResource("7_4c57u")]
+script = ExtResource("6_4c57u")
 
 [node name="Area2D" type="Area2D" parent="Planet/Rose"]
 script = ExtResource("8_efxa6")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Planet/Rose/Area2D"]
-polygon = PackedVector2Array(-38, 22, 39, 42, 38, 35, 8, 22, 18, -5, 26, -21, 21, -33, 5, -39, -15, -29, -12, -16, -7, -7, -9, 3, -12, 13, -38, 14)
+polygon = PackedVector2Array(-31, 23, 20, 35, 23, 26, 15, 20, 26, -21, 21, -33, 5, -39, -15, -29, -17, 12, -29, 16)
 
-[node name="Well" type="Sprite2D" parent="Planet"]
+[node name="Well" type="Sprite2D" parent="Planet" groups=["interactive"]]
 unique_name_in_owner = true
 z_index = 1
 position = Vector2(-135, -241)
 texture = ExtResource("5_lquwl")
-
-[node name="GlowByMouse" parent="Planet/Well" instance=ExtResource("7_4c57u")]
 
 [node name="Area2D" type="Area2D" parent="Planet/Well"]
 script = ExtResource("8_efxa6")
@@ -92,12 +88,3 @@ offset_right = -1152.0
 offset_bottom = -648.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Icon" type="TextureRect" parent="UI/ControlRoot"]
-layout_mode = 0
-offset_right = 128.0
-offset_bottom = 128.0
-size_flags_horizontal = 0
-size_flags_vertical = 0
-texture = ExtResource("6_7mycd")
-metadata/_edit_use_anchors_ = true

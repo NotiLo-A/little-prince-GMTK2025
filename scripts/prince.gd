@@ -3,6 +3,7 @@ extends Sprite2D
 const walk_speed := 0.5 # rads/s
 const position_limit = 1.3 # +-rads
 
+var item_in_hands: Node
 var start_pos: Vector2
 var target_reached := true
 var target_rotation := 0.0
