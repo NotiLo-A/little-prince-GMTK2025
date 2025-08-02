@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dr6i8ap1eg761"]
+[gd_scene load_steps=11 format=3 uid="uid://mgbjumoya3qi"]
 
 [ext_resource type="Script" uid="uid://lwhdu6ojtt2t" path="res://scripts/planet.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://b3x8hsfhpect2" path="res://sprites/prince.png" id="1_ig7tw"]
@@ -8,10 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://xshfhsqdpo4o" path="res://sprites/moon.png" id="6_5vw27"]
 [ext_resource type="Texture2D" uid="uid://dn54d1yqdaod3" path="res://icon.svg" id="6_7mycd"]
 [ext_resource type="Texture2D" uid="uid://duv6rjcwodjb5" path="res://sprites/sky.png" id="6_272bh"]
-[ext_resource type="PackedScene" uid="uid://7ke4exb4uac6" path="res://scenes/glow_by_mouse.tscn" id="7_4c57u"]
-[ext_resource type="Script" uid="uid://y2782p3g3lvy" path="res://scripts/change_cursor_on_hover.gd" id="8_efxa6"]
+[ext_resource type="PackedScene" uid="uid://7ke4exb4uac6" path="res://scenes/outline_by_mouse.tscn" id="7_4c57u"]
+[ext_resource type="Script" uid="uid://y2782p3g3lvy" path="res://scripts/interactive_area.gd" id="8_efxa6"]
 
-[node name="Root" type="Node2D"]
+[node name="GameRoot" type="Node2D"]
 
 [node name="Planet" type="Sprite2D" parent="."]
 unique_name_in_owner = true

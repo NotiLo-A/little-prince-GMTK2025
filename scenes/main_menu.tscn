@@ -1,0 +1,161 @@
+[gd_scene load_steps=11 format=3 uid="uid://ciqcht1kgj8g0"]
+
+[ext_resource type="Script" uid="uid://cqt4rrvlepcb" path="res://scripts/main_menu.gd" id="1_wu84c"]
+[ext_resource type="Texture2D" uid="uid://btseyiwqf4rvj" path="res://sprites/sky_MM.png" id="2_8ln24"]
+[ext_resource type="Texture2D" uid="uid://xshfhsqdpo4o" path="res://sprites/moon.png" id="3_rtw2f"]
+[ext_resource type="Script" uid="uid://u5nlpg27q6ex" path="res://scripts/moon_2.gd" id="4_oa1go"]
+[ext_resource type="FontFile" uid="uid://7v5w2d0bkk43" path="res://fonts/Pixelon.ttf" id="5_8ln24"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ow34m"]
+bg_color = Color(0.752941, 0.752941, 0.752941, 0.533333)
+border_color = Color(0.659824, 0.890237, 0.185912, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_826wr"]
+bg_color = Color(0.909699, 0.724313, 0.590443, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ucygd"]
+bg_color = Color(0.936264, 0.795551, 0.695272, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h7a2f"]
+bg_color = Color(0.868685, 0.646079, 0.483954, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.180392)
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mipys"]
+bg_color = Color(0.937255, 0.796078, 0.694118, 1)
+
+[node name="Menu" type="Node"]
+script = ExtResource("1_wu84c")
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="Sky" type="TextureRect" parent="Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_8ln24")
+stretch_mode = 1
+
+[node name="Planets" type="CanvasLayer" parent="."]
+
+[node name="LeftPlanet" type="Control" parent="Planets"]
+layout_mode = 3
+anchor_left = 0.032
+anchor_top = 0.735
+anchor_right = 0.032
+anchor_bottom = 0.735
+offset_left = 13.136
+offset_top = -6.28
+offset_right = 13.136
+offset_bottom = -6.28
+
+[node name="Sprite2D" type="Sprite2D" parent="Planets/LeftPlanet"]
+texture = ExtResource("3_rtw2f")
+script = ExtResource("4_oa1go")
+
+[node name="RightPlanet" type="Control" parent="Planets"]
+layout_mode = 3
+anchor_left = 0.988
+anchor_top = 0.4
+anchor_right = 0.988
+anchor_bottom = 0.4
+offset_left = 111.824
+offset_right = 111.824
+
+[node name="Sprite2D" type="Sprite2D" parent="Planets/RightPlanet"]
+texture = ExtResource("3_rtw2f")
+script = ExtResource("4_oa1go")
+
+[node name="UI" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="UIRoot" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Buttons" type="Panel" parent="UI/UIRoot"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.6
+anchor_right = 0.5
+anchor_bottom = 0.6
+offset_left = -170.5
+offset_top = -154.5
+offset_right = 170.5
+offset_bottom = 154.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_ow34m")
+
+[node name="Start" type="Button" parent="UI/UIRoot/Buttons"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 62.0
+offset_top = 46.0
+offset_right = 282.0
+offset_bottom = 122.0
+mouse_force_pass_scroll_events = false
+theme_override_fonts/font = ExtResource("5_8ln24")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_826wr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ucygd")
+theme_override_styles/normal = SubResource("StyleBoxFlat_h7a2f")
+text = "Start Game"
+
+[node name="Exit" type="Button" parent="UI/UIRoot/Buttons"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 63.0
+offset_top = 177.0
+offset_right = 283.0
+offset_bottom = 253.0
+theme_override_fonts/font = ExtResource("5_8ln24")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_826wr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mipys")
+theme_override_styles/normal = SubResource("StyleBoxFlat_h7a2f")
+text = "Exit"
+
+[node name="Score" type="Label" parent="UI/UIRoot"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.1
+anchor_right = 0.5
+anchor_bottom = 0.1
+offset_left = -274.0
+offset_top = -31.8
+offset_right = 274.0
+offset_bottom = 100.2
+theme_override_fonts/font = ExtResource("5_8ln24")
+theme_override_font_sizes/font_size = 131
+text = "SCORE: 0"
+
+[connection signal="mouse_entered" from="UI/UIRoot/Buttons/Start" to="." method="_on_start_button_mouse_entered"]
+[connection signal="mouse_exited" from="UI/UIRoot/Buttons/Start" to="." method="_on_start_button_mouse_exited"]
+[connection signal="pressed" from="UI/UIRoot/Buttons/Start" to="." method="_on_start_button_pressed"]
+[connection signal="mouse_entered" from="UI/UIRoot/Buttons/Exit" to="." method="_on_exit_button_mouse_entered"]
+[connection signal="mouse_exited" from="UI/UIRoot/Buttons/Exit" to="." method="_on_exit_button_mouse_exited"]
+[connection signal="pressed" from="UI/UIRoot/Buttons/Exit" to="." method="_on_exit_button_pressed"]
