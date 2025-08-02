@@ -8,6 +8,7 @@ var start_pos: Vector2
 var target_reached := true
 var target_rotation := 0.0
 var target_object: Node2D
+var was_target_assigned_this_frame := false
 
 func _ready() -> void:
 	GlobalNodes.prince = self
@@ -18,7 +19,21 @@ func _process(delta: float) -> void:
 		var mouse_pos: Vector2 = GlobalNodes.planet.get_local_mouse_position()
 		call_prince_to_place(-mouse_pos.angle_to(Vector2.UP))
 	move(delta)
+	was_target_assigned_this_frame = false
 
+
+func call_prince_to_interact(where: Node2D):
+	target_reached = false
+	target_rotation = -where.position.angle_to(Vector2.UP)
+	target_object = where
+	was_target_assigned_this_frame = true
+
+func call_prince_to_place(where: float):
+	if was_target_assigned_this_frame:
+		return
+	target_reached = false
+	target_rotation = where
+	was_target_assigned_this_frame = true
 
 func move(delta: float) -> void:
 	var normalized_diff = wrapf(rotation - target_rotation, -PI, PI)
@@ -32,7 +47,6 @@ func move(delta: float) -> void:
 		if abs(wrapf(rotation - target_rotation, -PI, PI)) < walk_speed * delta:
 			print("target_reached")
 			target_reached = true
-			print(target_object)
 			if target_object != null:
 				target_object.interact(carried_item)
 				target_object = null
@@ -41,11 +55,3 @@ func move(delta: float) -> void:
 	) - GlobalNodes.planet.rotation
 	# wierd ass correction because of the long scarf at the side of the sprite
 	position = start_pos.rotated(rotation + (.05 if flip_h else -.05))
-
-func call_prince_to_interact(where: Node2D):
-	call_prince_to_place(where.position.angle())
-	target_object = where
-
-func call_prince_to_place(where: float):
-	target_reached = false
-	target_rotation = where
