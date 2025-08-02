@@ -13,7 +13,7 @@ config_version=5
 config/name="gmtk2025-little-prince"
 run/main_scene="uid://ciqcht1kgj8g0"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://sprites/icon.svg"
 
 [autoload]
 

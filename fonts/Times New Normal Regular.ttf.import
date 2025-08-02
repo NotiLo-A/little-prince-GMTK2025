@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bvnyjgrtnih4n"
-path="res://.godot/imported/Pixelon.otf-85f4640ccd6fd67446d26b953f8b700c.fontdata"
+uid="uid://dxojsvtnqc87w"
+path="res://.godot/imported/Times New Normal Regular.ttf-2bfee45ff32bdef399d849d0b80c09c7.fontdata"
 
 [deps]
 
-source_file="res://fonts/Pixelon.otf"
-dest_files=["res://.godot/imported/Pixelon.otf-85f4640ccd6fd67446d26b953f8b700c.fontdata"]
+source_file="res://fonts/Times New Normal Regular.ttf"
+dest_files=["res://.godot/imported/Times New Normal Regular.ttf-2bfee45ff32bdef399d849d0b80c09c7.fontdata"]
 
 [params]
 
