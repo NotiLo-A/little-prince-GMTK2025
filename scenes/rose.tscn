@@ -22,4 +22,5 @@ polygon = PackedVector2Array(-31, 23, 20, 35, 23, 26, 26, -21, 21, -33, 5, -39, 
 
 [node name="OffScreenUpdater" parent="." instance=ExtResource("4_abck2")]
 
-[connection signal="update_state" from="OffScreenUpdater" to="." method="_on_update_state"]
+[connection signal="on_highest_position" from="OffScreenUpdater" to="." method="_on_off_screen_updater_on_highest_position"]
+[connection signal="on_lowest_position" from="OffScreenUpdater" to="." method="_on_off_screen_updater_on_lowest_position"]
