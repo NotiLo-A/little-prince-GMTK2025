@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://64a1vpwbdjqw"]
 
 [ext_resource type="Texture2D" uid="uid://byg4u2a3bb2yk" path="res://sprites/well.png" id="1_rgtmi"]
-[ext_resource type="Script" uid="uid://y2782p3g3lvy" path="res://scripts/change_cursor_on_hover.gd" id="2_dgxn0"]
+[ext_resource type="Script" uid="uid://y2782p3g3lvy" path="res://scripts/interactive_area.gd" id="2_dgxn0"]
 
 [node name="Well" type="Sprite2D" groups=["interactive"]]
 z_index = 1

@@ -1,4 +1,4 @@
 extends Sprite2D
 
 func interact(carried_item: Node) -> void:
-	print("interacted with rose")
+	print("interacted with well")

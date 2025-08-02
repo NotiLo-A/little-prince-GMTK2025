@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bihdwqfin3c01" path="res://sprites/rose.png" id="1_o3jgc"]
 [ext_resource type="Script" uid="uid://bbnx2nl2yx73x" path="res://scripts/rose.gd" id="2_abck2"]
-[ext_resource type="Script" uid="uid://y2782p3g3lvy" path="res://scripts/change_cursor_on_hover.gd" id="3_83it7"]
+[ext_resource type="Script" uid="uid://y2782p3g3lvy" path="res://scripts/interactive_area.gd" id="3_83it7"]
 
 [node name="Rose" type="Sprite2D" groups=["interactive"]]
 z_index = 1
@@ -13,4 +13,4 @@ script = ExtResource("2_abck2")
 script = ExtResource("3_83it7")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PackedVector2Array(-31, 23, 20, 35, 23, 26, 15, 20, 26, -21, 21, -33, 5, -39, -15, -29, -17, 12, -29, 16)
+polygon = PackedVector2Array(-31, 23, 20, 35, 23, 26, 26, -21, 21, -33, 5, -39, -15, -29, -29, 16)
