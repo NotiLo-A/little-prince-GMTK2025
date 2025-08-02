@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b7eadlejykint"]
+[gd_scene load_steps=6 format=3 uid="uid://dm83ckdhseocu"]
 
 [ext_resource type="Texture2D" uid="uid://xshfhsqdpo4o" path="res://sprites/moon.png" id="1_48b8c"]
 [ext_resource type="Script" uid="uid://lwhdu6ojtt2t" path="res://scripts/planet.gd" id="2_3s4jt"]
