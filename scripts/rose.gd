@@ -1,4 +1,10 @@
 extends Sprite2D
 
+@export var textures: Array[Texture]
+@export var sprite: Sprite2D
+
+var index := 0
+
 func _on_update_state() -> void:
-	print("update rose");
+	index += 1
+	sprite.texture = textures[index]

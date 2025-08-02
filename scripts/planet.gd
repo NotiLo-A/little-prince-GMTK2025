@@ -1,7 +1,7 @@
 extends Sprite2D
 
-const day_length := 100 # seconds
-const rotation_speed = 2 * PI / day_length # rad/s
+@export var day_length := 100 # seconds
+var rotation_speed := 2 * PI / day_length # rad/s
 
 func _ready() -> void:
 	for node in get_tree().get_nodes_in_group("interactive"):
