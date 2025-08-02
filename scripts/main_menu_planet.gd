@@ -12,7 +12,6 @@ var friction := 0.97
 func _input(event: InputEvent):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
-			# Преобразуем позицию мыши в локальные координаты спрайта
 			var local_mouse_pos = to_local(get_global_mouse_position())
 			if get_rect().has_point(local_mouse_pos):
 				rotating = true
