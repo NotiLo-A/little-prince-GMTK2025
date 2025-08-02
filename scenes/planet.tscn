@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://dm83ckdhseocu"]
+[gd_scene load_steps=9 format=3 uid="uid://dm83ckdhseocu"]
 
 [ext_resource type="Texture2D" uid="uid://xshfhsqdpo4o" path="res://sprites/moon.png" id="1_48b8c"]
 [ext_resource type="Script" uid="uid://lwhdu6ojtt2t" path="res://scripts/planet.gd" id="2_3s4jt"]
 [ext_resource type="PackedScene" uid="uid://cnv4ph1tjelmg" path="res://scenes/prince.tscn" id="3_1wmcx"]
 [ext_resource type="PackedScene" uid="uid://oyfwu2kokscm" path="res://scenes/rose.tscn" id="4_m5dqw"]
 [ext_resource type="PackedScene" uid="uid://64a1vpwbdjqw" path="res://scenes/well.tscn" id="5_8dfcq"]
+[ext_resource type="Script" uid="uid://bvlr3hk7c2uy1" path="res://scripts/well.gd" id="6_3s4jt"]
+[ext_resource type="PackedScene" uid="uid://jgoyt24fvgg5" path="res://scenes/watering_can.tscn" id="7_m5dqw"]
+[ext_resource type="Script" path="res://scenes/watering_can.gd" id="8_8dfcq"]
 
 [node name="Planet" type="Sprite2D"]
 texture = ExtResource("1_48b8c")
@@ -14,9 +17,14 @@ script = ExtResource("2_3s4jt")
 position = Vector2(0, -302)
 
 [node name="Rose" parent="." instance=ExtResource("4_m5dqw")]
-unique_name_in_owner = true
 position = Vector2(70, -269)
 
 [node name="Well" parent="." instance=ExtResource("5_8dfcq")]
-unique_name_in_owner = true
-position = Vector2(-135, -241)
+position = Vector2(135, 241)
+rotation = 3.14159
+script = ExtResource("6_3s4jt")
+
+[node name="WateringCan" parent="." instance=ExtResource("7_m5dqw")]
+position = Vector2(188, -184)
+rotation = 0.785398
+script = ExtResource("8_8dfcq")

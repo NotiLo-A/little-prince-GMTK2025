@@ -14,5 +14,5 @@ func _process(_delta: float) -> void:
 	$AnimationPlayer.speed_scale = cos(cos(Time.get_ticks_msec()))
 	var alpha: float = override_alpha_val
 	if !override_alpha:
-		alpha = 2 / parent.get_local_mouse_position().length() ** 0.75
-	set_instance_shader_parameter("alpha", clamp(alpha, 0, 0.2))
+		alpha = 8 / parent.get_local_mouse_position().length() ** 1
+	set_instance_shader_parameter("alpha", clamp(alpha, 0, 0.5))
