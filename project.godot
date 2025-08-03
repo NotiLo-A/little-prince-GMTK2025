@@ -19,6 +19,7 @@ config/icon="res://sprites/icon.svg"
 
 GlobalNodes="*res://scripts/global_nodes.gd"
 MusicPlayer="*res://scripts/music_player.gd"
+GameStaticData="*res://scripts/game.gd"
 
 [editor]
 

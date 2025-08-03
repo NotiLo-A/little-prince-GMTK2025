@@ -8,6 +8,7 @@ var index := 0
 var is_on_last_stage: bool
 
 func _ready() -> void:
+	GameStaticData.loop = 0
 	is_on_last_stage = false
 
 func interact(carried_item: Node) -> void:
@@ -22,6 +23,8 @@ func interact(carried_item: Node) -> void:
 	restore_state()
 
 func _on_off_screen_updater_on_highest_position() -> void:
+	GameStaticData.loop += 1
+
 	if (is_on_last_stage):
 		game_over()
 

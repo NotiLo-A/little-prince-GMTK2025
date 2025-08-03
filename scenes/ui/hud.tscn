@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cw6daa5jiawki"]
+[gd_scene load_steps=6 format=3 uid="uid://cw6daa5jiawki"]
 
 [ext_resource type="Texture2D" uid="uid://bes2qnrlmln5p" path="res://sprites/watering_can.png" id="1_0mwgc"]
 [ext_resource type="Script" uid="uid://bsw7j2dwvn3v2" path="res://scripts/util/carried_items_view.gd" id="1_hqnrr"]
 [ext_resource type="Texture2D" uid="uid://cht0qethsg171" path="res://sprites/watering_can_ui.png" id="2_bo48s"]
 [ext_resource type="FontFile" uid="uid://dxojsvtnqc87w" path="res://fonts/Times New Normal Regular.ttf" id="4_8qguk"]
+[ext_resource type="Script" uid="uid://bxdsr42rpt0fk" path="res://scenes/ui/loop_counter.gd" id="5_136eg"]
 
 [node name="UI" type="CanvasLayer"]
 
@@ -46,3 +47,21 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("4_8qguk")
 theme_override_font_sizes/font_size = 32
 text = "3/3"
+
+[node name="Control" type="Control" parent="." node_paths=PackedStringArray("label")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_136eg")
+label = NodePath("LoopCounterLabel")
+
+[node name="LoopCounterLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 476.0
+offset_top = 41.0
+offset_right = 659.0
+offset_bottom = 105.0
+theme_override_fonts/font = ExtResource("4_8qguk")
+theme_override_font_sizes/font_size = 64
+text = "Loop: 1"
