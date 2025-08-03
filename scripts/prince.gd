@@ -1,4 +1,4 @@
-class_name Prince extends Sprite2D
+class_name Prince extends AnimatedSprite2D
 
 const walk_speed := 0.5 # rads/s
 const position_limit = 1.3 # +-rads
@@ -36,6 +36,7 @@ func call_prince_to_place(where: float):
 	was_target_assigned_this_frame = true
 
 func move(delta: float) -> void:
+	play("idle" if target_reached else "walk")
 	var normalized_diff = wrapf(rotation - target_rotation, -PI, PI)
 	if !target_reached:
 		if normalized_diff > 0:
@@ -45,7 +46,7 @@ func move(delta: float) -> void:
 			rotation += walk_speed * delta
 			flip_h = false
 		if abs(wrapf(rotation - target_rotation, -PI, PI)) < walk_speed * delta:
-			print("target_reached")
+			print("target reached")
 			target_reached = true
 			if target_object != null:
 				target_object.interact(carried_item)
