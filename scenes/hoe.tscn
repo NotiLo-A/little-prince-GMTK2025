@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2rdcipn25g0g"]
+
+[ext_resource type="Texture2D" uid="uid://o7ahn7wprvb8" path="res://sprites/hoe.png" id="1_ctsn0"]
+[ext_resource type="Script" uid="uid://y2782p3g3lvy" path="res://scripts/util/interactive_area.gd" id="2_kfu8c"]
+
+[node name="Hoe" type="Sprite2D" groups=["interactive"]]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_ctsn0")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_kfu8c")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(30, -35, 5, 57.5, -20, 57.5, -27.5, -60, -7.5, -60)

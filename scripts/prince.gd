@@ -3,7 +3,7 @@ class_name Prince extends AnimatedSprite2D
 @export var walk_speed := 1.5 # rads/s
 @export var position_limit = 1.3 # +-rads
 
-var carried_item: Node
+var carried_item: Node2D
 var start_pos: Vector2
 var target_reached := true
 var target_rotation := 0.0
@@ -34,6 +34,21 @@ func call_prince_to_place(where: float):
 	target_reached = false
 	target_rotation = where
 	was_target_assigned_this_frame = true
+
+func drop_item():
+	var new_pos := Vector2.UP.rotated(rotation)
+	carried_item.position = new_pos * carried_item.position.length()
+	carried_item.rotation = rotation
+	carried_item.visible = true
+	carried_item.set_process(true)
+	carried_item = null
+
+func pick_up_item(item: Node2D) -> void:
+	if carried_item != null:
+		drop_item()
+	carried_item = item
+	carried_item.visible = false
+	carried_item.set_process(false)
 
 func move(delta: float) -> void:
 	play("idle" if target_reached else "walk")
