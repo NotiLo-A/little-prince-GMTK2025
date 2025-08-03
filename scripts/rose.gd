@@ -29,4 +29,4 @@ func dry():
 	sprite.texture = textures[index]
 
 func game_over():
-	get_tree().change_scene_to_file("res://scenes/game_over_screen.tscn")
+	get_tree().change_scene_to_file("res://scenes/ui/game_over_screen.tscn")
