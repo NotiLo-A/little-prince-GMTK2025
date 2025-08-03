@@ -11,11 +11,16 @@ sprout_sprite = NodePath("sprout")
 tree_sprite = NodePath("tree")
 
 [node name="sprout" type="Sprite2D" parent="."]
-position = Vector2(0, -32)
+position = Vector2(0, -36)
+scale = Vector2(0.792462, 0.792462)
 texture = ExtResource("2_n6ach")
 
 [node name="tree" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(0, -90)
 texture = ExtResource("3_oog3q")
 
 [node name="OffScreenUpdater" parent="." instance=ExtResource("2_4h36e")]
+
+[connection signal="on_highest_position" from="OffScreenUpdater" to="." method="_on_high"]
+[connection signal="on_lowest_position" from="OffScreenUpdater" to="." method="_on_low"]
