@@ -8,9 +8,9 @@
 [ext_resource type="Script" uid="uid://bvlr3hk7c2uy1" path="res://scripts/well.gd" id="6_3s4jt"]
 [ext_resource type="PackedScene" uid="uid://jgoyt24fvgg5" path="res://scenes/watering_can.tscn" id="7_m5dqw"]
 [ext_resource type="Script" uid="uid://ddqcfkxgv3bxc" path="res://scripts/watering_can.gd" id="8_8dfcq"]
-[ext_resource type="PackedScene" path="res://scenes/hoe.tscn" id="9_8dfcq"]
-[ext_resource type="Script" path="res://scripts/hoe.gd" id="10_qw1i6"]
-[ext_resource type="PackedScene" uid="uid://iniq47xo4jx5" path="res://scenes/baobab_spawn_points.tscn" id="11_ekhpw"]
+[ext_resource type="PackedScene" uid="uid://c2rdcipn25g0g" path="res://scenes/hoe.tscn" id="9_8dfcq"]
+[ext_resource type="Script" uid="uid://hvxk7cxegrr" path="res://scripts/hoe.gd" id="10_qw1i6"]
+[ext_resource type="PackedScene" uid="uid://bjpmw2dnk7487" path="res://scenes/baobab.tscn" id="11_ekhpw"]
 
 [node name="Planet" type="Sprite2D"]
 texture = ExtResource("1_48b8c")
@@ -38,4 +38,26 @@ position = Vector2(252, 62)
 rotation = 0.283728
 script = ExtResource("10_qw1i6")
 
-[node name="BaobabSpawnPoints" parent="." instance=ExtResource("11_ekhpw")]
+[node name="Baobab" parent="." instance=ExtResource("11_ekhpw")]
+position = Vector2(-60, 248)
+rotation = -3.04523
+
+[node name="Baobab2" parent="." instance=ExtResource("11_ekhpw")]
+position = Vector2(225, 119)
+rotation = -4.35267
+
+[node name="Baobab3" parent="." instance=ExtResource("11_ekhpw")]
+position = Vector2(-240, -86)
+rotation = -1.43642
+
+[node name="Baobab4" parent="." instance=ExtResource("11_ekhpw")]
+position = Vector2(-88, -237)
+rotation = -0.548152
+
+[node name="Baobab5" parent="." instance=ExtResource("11_ekhpw")]
+position = Vector2(-229, 107)
+rotation = -2.21267
+
+[node name="Baobab6" parent="." instance=ExtResource("11_ekhpw")]
+position = Vector2(238, -85)
+rotation = 1.06783

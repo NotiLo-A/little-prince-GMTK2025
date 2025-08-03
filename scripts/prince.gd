@@ -41,6 +41,8 @@ func drop_item():
 	var new_pos := Vector2.UP.rotated(rotation)
 	carried_item.position = new_pos * carried_item.position.length()
 	carried_item.rotation = rotation
+	if carried_item is Hoe:
+		carried_item.rotation -= PI / 2
 	carried_item.visible = true
 	carried_item.set_process(true)
 	carried_item = null
