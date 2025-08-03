@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://ciqcht1kgj8g0"]
 
 [ext_resource type="Script" uid="uid://cqt4rrvlepcb" path="res://scripts/ui/main_menu.gd" id="1_x2yvf"]
-[ext_resource type="Texture2D" uid="uid://btseyiwqf4rvj" path="res://sprites/sky_MM.png" id="2_uhagc"]
+[ext_resource type="Texture2D" uid="uid://ddltxi85e5cmm" path="res://sprites/space.png" id="2_x2yvf"]
 [ext_resource type="Texture2D" uid="uid://xshfhsqdpo4o" path="res://sprites/planet.png" id="3_btxxm"]
 [ext_resource type="Script" uid="uid://u5nlpg27q6ex" path="res://scripts/ui/main_menu_planet.gd" id="4_wb0q5"]
 [ext_resource type="FontFile" uid="uid://dxojsvtnqc87w" path="res://fonts/Times New Normal Regular.ttf" id="6_uhagc"]
@@ -42,10 +42,15 @@ layer = 0
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -533.0
+offset_top = -269.0
+offset_right = 2155.0
+offset_bottom = 1243.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.617368, 0.617368)
 mouse_filter = 2
-texture = ExtResource("2_uhagc")
+texture = ExtResource("2_x2yvf")
 stretch_mode = 1
 
 [node name="Planets" type="CanvasLayer" parent="."]

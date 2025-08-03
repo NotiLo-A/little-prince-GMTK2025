@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://chxp4yr0w7lob"]
 
 [ext_resource type="PackedScene" uid="uid://dm83ckdhseocu" path="res://scenes/planet.tscn" id="1_hx1lv"]
-[ext_resource type="Texture2D" uid="uid://duv6rjcwodjb5" path="res://sprites/sky.png" id="2_5nfmu"]
+[ext_resource type="Texture2D" uid="uid://ddltxi85e5cmm" path="res://sprites/space.png" id="2_5nfmu"]
 [ext_resource type="PackedScene" uid="uid://cw6daa5jiawki" path="res://scenes/ui/hud.tscn" id="3_5nfmu"]
 
 [node name="Root" type="Node2D"]
@@ -32,9 +32,13 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -384.0
+offset_top = -216.0
+offset_right = 2304.0
+offset_bottom = 1296.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(2, 2)
+scale = Vector2(0.890467, 0.890467)
 mouse_filter = 2
 texture = ExtResource("2_5nfmu")
 stretch_mode = 1
