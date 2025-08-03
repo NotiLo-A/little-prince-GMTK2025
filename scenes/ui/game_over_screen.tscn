@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bukisxwojqmul"]
+[gd_scene load_steps=4 format=3 uid="uid://bukisxwojqmul"]
 
-[ext_resource type="Script" uid="uid://cofxlg80ipcw" path="res://scripts/game_over_screen.gd" id="1_61w2s"]
+[ext_resource type="Script" uid="uid://cofxlg80ipcw" path="res://scripts/ui/game_over_screen.gd" id="1_61w2s"]
 [ext_resource type="Texture2D" uid="uid://btseyiwqf4rvj" path="res://sprites/sky_MM.png" id="1_iwahs"]
+[ext_resource type="FontFile" uid="uid://dxojsvtnqc87w" path="res://fonts/Times New Normal Regular.ttf" id="3_bllgf"]
 
 [node name="GameOverScreen" type="Control"]
 layout_mode = 3
@@ -14,9 +15,11 @@ script = ExtResource("1_61w2s")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = -1
-offset_right = 1760.0
-offset_bottom = 968.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_iwahs")
 
 [node name="Label" type="Label" parent="."]
@@ -30,6 +33,7 @@ offset_left = -178.608
 offset_top = -55.504
 offset_right = 179.392
 offset_bottom = 55.496
+theme_override_fonts/font = ExtResource("3_bllgf")
 theme_override_font_sizes/font_size = 66
 text = "Game Over"
 horizontal_alignment = 1
@@ -38,14 +42,16 @@ vertical_alignment = 1
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.495
+anchor_left = 0.5
 anchor_top = 0.619
-anchor_right = 0.495
+anchor_right = 0.5
 anchor_bottom = 0.619
 offset_left = -203.24
 offset_top = -34.112
 offset_right = 202.76
 offset_bottom = 33.888
+theme_override_fonts/font = ExtResource("3_bllgf")
+theme_override_font_sizes/font_size = 32
 text = "Back to Main Menu"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
