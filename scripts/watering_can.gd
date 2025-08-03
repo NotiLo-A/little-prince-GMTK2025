@@ -2,7 +2,7 @@ extends Sprite2D
 
 class_name WateringCan
 
-@export var water_max := 3
+@export var water_max := 1
 
 var water := water_max
 
