@@ -142,7 +142,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_mipys")
 theme_override_styles/normal = SubResource("StyleBoxFlat_h7a2f")
 text = "Exit"
 
-[node name="Score" type="Label" parent="UI/UIRoot"]
+[node name="Title" type="Label" parent="UI/UIRoot"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -154,6 +154,8 @@ offset_top = -31.8
 offset_right = 274.0
 offset_bottom = 100.2
 grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0.141176, 0.247059, 0.45098, 1)
+theme_override_constants/outline_size = 16
 theme_override_fonts/font = ExtResource("6_uhagc")
 theme_override_font_sizes/font_size = 131
 text = "Little Prince"
