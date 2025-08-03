@@ -9,6 +9,7 @@
 [node name="Baobab" type="Sprite2D" groups=["interactive"]]
 z_index = 1
 script = ExtResource("1_72k6w")
+change_to_grow = 0.3
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("5_lycyf")
@@ -24,9 +25,8 @@ scale = Vector2(0.792462, 0.792462)
 texture = ExtResource("2_n6ach")
 
 [node name="Tree" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(1, -79)
 texture = ExtResource("3_oog3q")
 
-[connection signal="on_highest_position" from="OffScreenUpdater" to="." method="_on_off_screen_updater_on_highest_position"]
-[connection signal="on_lowest_position" from="OffScreenUpdater" to="." method="_on_off_screen_updater_on_lowest_position"]
+[connection signal="on_highest_position" from="OffScreenUpdater" to="." method="_on_high"]
+[connection signal="on_lowest_position" from="OffScreenUpdater" to="." method="_on_low"]

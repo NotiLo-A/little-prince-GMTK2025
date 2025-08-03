@@ -17,7 +17,7 @@ func interact(carried_item: Node2D) -> void:
 		return
 	if state == States.Sprout:
 		state = States.None
-	update_state()
+		update_state()
 
 func _ready() -> void:
 	update_state()
@@ -45,6 +45,7 @@ func _process(_delta: float) -> void:
 
 func update_state():
 	$Area2D.input_pickable = state != States.None
+
 	if state == States.Sprout:
 		sprout_sprite.visible = true
 		tree_sprite.visible = false
