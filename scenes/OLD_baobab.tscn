@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwlk6k6t5vapk"]
+
+[ext_resource type="Script" uid="uid://cwj2f3uap8y1m" path="res://scripts/baobab.gd" id="1_xrov8"]
+[ext_resource type="Texture2D" uid="uid://ccpsxj3djwtq7" path="res://sprites/baobab/baobab_1.png" id="2_hbkg8"]
+[ext_resource type="Texture2D" uid="uid://uglkvbkvn42s" path="res://sprites/baobab/baobab_2.png" id="3_8fcvg"]
+[ext_resource type="PackedScene" uid="uid://c7475gmlrw2sn" path="res://scenes/off_screen_updater.tscn" id="4_o5r41"]
+
+[node name="Baobab" type="Node2D" node_paths=PackedStringArray("sprout_sprite", "tree_sprite")]
+script = ExtResource("1_xrov8")
+sprout_sprite = NodePath("sprout")
+tree_sprite = NodePath("tree")
+slow_rate = 0.6
+change_to_grow = 0.7
+
+[node name="sprout" type="Sprite2D" parent="."]
+position = Vector2(0, -36)
+scale = Vector2(0.792462, 0.792462)
+texture = ExtResource("2_hbkg8")
+
+[node name="tree" type="Sprite2D" parent="."]
+position = Vector2(1, -79)
+texture = ExtResource("3_8fcvg")
+
+[node name="OffScreenUpdater" parent="." instance=ExtResource("4_o5r41")]
+
+[connection signal="on_highest_position" from="OffScreenUpdater" to="." method="_on_high"]
+[connection signal="on_lowest_position" from="OffScreenUpdater" to="." method="_on_low"]

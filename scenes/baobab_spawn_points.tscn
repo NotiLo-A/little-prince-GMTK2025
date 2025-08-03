@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://iniq47xo4jx5"]
 
-[ext_resource type="PackedScene" uid="uid://cwlk6k6t5vapk" path="res://scenes/baobab.tscn" id="1_y8o0o"]
+[ext_resource type="PackedScene" uid="uid://cwlk6k6t5vapk" path="res://scenes/OLD_baobab.tscn" id="1_y8o0o"]
 
 [node name="BaobabSpawnPoints" type="Node2D"]
 

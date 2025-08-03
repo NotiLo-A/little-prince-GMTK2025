@@ -22,11 +22,12 @@ func _process(_delta: float) -> void:
 	if prince.carried_item is WateringCan:
 		show_water(prince.carried_item)
 		return
+
 	if prince.carried_item is Hoe:
 		item_icon.texture = hoe_texture
 		item_icon.visible = true
 		counter_label.visible = false
-
+		return
 
 	hide_all()
 
