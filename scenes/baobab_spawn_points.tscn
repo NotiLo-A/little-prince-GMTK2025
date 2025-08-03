@@ -1,29 +1,3 @@
-[gd_scene load_steps=2 format=3 uid="uid://iniq47xo4jx5"]
-
-[ext_resource type="PackedScene" uid="uid://cwlk6k6t5vapk" path="res://scenes/OLD_baobab.tscn" id="1_y8o0o"]
+[gd_scene format=3 uid="uid://cx31jd7bskkhv"]
 
 [node name="BaobabSpawnPoints" type="Node2D"]
-
-[node name="Baobab" parent="." instance=ExtResource("1_y8o0o")]
-position = Vector2(-60, 248)
-rotation = -3.04523
-
-[node name="Baobab2" parent="." instance=ExtResource("1_y8o0o")]
-position = Vector2(225, 119)
-rotation = -4.35267
-
-[node name="Baobab3" parent="." instance=ExtResource("1_y8o0o")]
-position = Vector2(-240, -86)
-rotation = -1.43642
-
-[node name="Baobab4" parent="." instance=ExtResource("1_y8o0o")]
-position = Vector2(-88, -237)
-rotation = -0.548152
-
-[node name="Baobab5" parent="." instance=ExtResource("1_y8o0o")]
-position = Vector2(-229, 107)
-rotation = -2.21267
-
-[node name="Baobab6" parent="." instance=ExtResource("1_y8o0o")]
-position = Vector2(238, -85)
-rotation = 1.06783

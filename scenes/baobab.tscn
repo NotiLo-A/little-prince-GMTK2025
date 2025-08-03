@@ -18,12 +18,12 @@ polygon = PackedVector2Array(-10, 10, 20, 2, 37, -59, 12, -78, -28, -71, -24, -2
 
 [node name="OffScreenUpdater" parent="." instance=ExtResource("2_4h36e")]
 
-[node name="sprout" type="Sprite2D" parent="."]
+[node name="Sprout" type="Sprite2D" parent="."]
 position = Vector2(0, -36)
 scale = Vector2(0.792462, 0.792462)
 texture = ExtResource("2_n6ach")
 
-[node name="tree" type="Sprite2D" parent="."]
+[node name="Tree" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(1, -79)
 texture = ExtResource("3_oog3q")
