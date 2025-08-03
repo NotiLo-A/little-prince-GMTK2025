@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://cw6daa5jiawki"]
+[gd_scene load_steps=3 format=3 uid="uid://cw6daa5jiawki"]
+
+[ext_resource type="Texture2D" uid="uid://bes2qnrlmln5p" path="res://sprites/watering_can.png" id="1_0mwgc"]
+[ext_resource type="Script" uid="uid://bsw7j2dwvn3v2" path="res://scripts/util/carried_items_view.gd" id="1_hqnrr"]
 
 [node name="UI" type="CanvasLayer"]
 
@@ -7,7 +10,26 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1152.0
-offset_bottom = -648.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+
+[node name="CarriedItemsView" type="MarginContainer" parent="ControlRoot" node_paths=PackedStringArray("item_icon")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -117.0
+offset_top = 18.0
+offset_right = -21.0
+offset_bottom = 95.0
+grow_horizontal = 0
+mouse_filter = 2
+script = ExtResource("1_hqnrr")
+item_icon = NodePath("TextureRect")
+
+[node name="TextureRect" type="TextureRect" parent="ControlRoot/CarriedItemsView"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("1_0mwgc")
+stretch_mode = 5
