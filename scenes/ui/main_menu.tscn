@@ -162,6 +162,26 @@ text = "Little Prince"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Label" type="Label" parent="UI/UIRoot"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -317.5
+offset_top = -134.0
+offset_right = 317.5
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0.141176, 0.247059, 0.45098, 1)
+theme_override_constants/outline_size = 8
+text = "To keep the rose alive, you need to water it, but be careful not to overdo it!
+Use the watering can to water it. If it runs out, refill it in the well.
+Baobabs will make you go slow, so don't forget to use the hoe to chop the sprouts!
+You can't chop off the grown baobab!"
+
 [connection signal="mouse_entered" from="UI/UIRoot/Buttons/Start" to="." method="_on_start_button_mouse_entered"]
 [connection signal="mouse_exited" from="UI/UIRoot/Buttons/Start" to="." method="_on_start_button_mouse_exited"]
 [connection signal="pressed" from="UI/UIRoot/Buttons/Start" to="." method="_on_start_button_pressed"]

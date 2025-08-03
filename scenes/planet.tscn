@@ -18,6 +18,7 @@ script = ExtResource("2_3s4jt")
 
 [node name="Prince" parent="." instance=ExtResource("3_1wmcx")]
 position = Vector2(0, -302)
+walk_speed = 1.0
 
 [node name="Rose" parent="." instance=ExtResource("4_m5dqw")]
 position = Vector2(70, -269)
