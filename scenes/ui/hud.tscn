@@ -27,6 +27,7 @@ grow_horizontal = 0
 mouse_filter = 2
 script = ExtResource("1_hqnrr")
 item_icon = NodePath("TextureRect")
+watering_can_texture = ExtResource("1_0mwgc")
 
 [node name="TextureRect" type="TextureRect" parent="ControlRoot/CarriedItemsView"]
 layout_mode = 2

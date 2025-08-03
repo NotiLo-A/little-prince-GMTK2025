@@ -1,6 +1,5 @@
 extends MarginContainer
 
-@export var tf: int
 @export var item_icon: TextureRect
 @export var watering_can_texture: Texture
 
