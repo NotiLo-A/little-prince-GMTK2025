@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://bukisxwojqmul"]
+[gd_scene load_steps=5 format=3 uid="uid://bukisxwojqmul"]
 
 [ext_resource type="Script" uid="uid://cofxlg80ipcw" path="res://scripts/ui/game_over_screen.gd" id="1_61w2s"]
 [ext_resource type="Texture2D" uid="uid://ddltxi85e5cmm" path="res://sprites/space.png" id="2_bllgf"]
 [ext_resource type="FontFile" uid="uid://dxojsvtnqc87w" path="res://fonts/Times New Normal Regular.ttf" id="3_bllgf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bllgf"]
+bg_color = Color(0, 0, 0, 0.772549)
 
 [node name="GameOverScreen" type="Control" node_paths=PackedStringArray("loose_reason_label", "loops_label")]
 layout_mode = 3
@@ -60,9 +63,10 @@ anchor_bottom = 0.5
 offset_left = -187.0
 offset_top = -145.0
 offset_right = 187.0
-offset_bottom = -13.0
+offset_bottom = 21.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bllgf")
 
 [node name="Reason" type="Label" parent="Panel"]
 layout_mode = 1
@@ -89,9 +93,9 @@ anchor_top = 0.348
 anchor_right = 0.504
 anchor_bottom = 0.348
 offset_left = -180.496
-offset_top = -1.936
+offset_top = 3.064
 offset_right = 177.504
-offset_bottom = 109.064
+offset_bottom = 114.064
 theme_override_fonts/font = ExtResource("3_bllgf")
 theme_override_font_sizes/font_size = 32
 text = "You've lasted 3 loops"

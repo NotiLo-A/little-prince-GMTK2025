@@ -20,6 +20,10 @@ func interact(carried_item: Node) -> void:
 		return
 
 	wateringCan.water -= 1
+
+	if index == 0:
+		GameStaticData.game_over("You overwatered the Rose!")
+
 	restore_state()
 
 func _on_off_screen_updater_on_highest_position() -> void:
