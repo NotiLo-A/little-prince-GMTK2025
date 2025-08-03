@@ -13,7 +13,7 @@ var state := States.None
 var prince_was_in_range: bool
 
 func interact(carried_item: Node2D) -> void:
-	if carried_item != Hoe:
+	if !carried_item is Hoe:
 		return
 	if state == States.Sprout:
 		state = States.None
