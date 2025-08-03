@@ -16,7 +16,7 @@ func _process(_delta: float) -> void:
 		item_icon.visible = false
 		return
 
-	var is_watering_can = prince.carried_item.name.contains("WateringCan")
+	var is_watering_can = prince.carried_item is WateringCan
 	if is_watering_can:
 		item_icon.visible = true
 		item_icon.texture = watering_can_texture
