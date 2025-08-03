@@ -5,7 +5,7 @@ var player: AudioStreamPlayer
 func _ready():
 	player = AudioStreamPlayer.new()
 	add_child(player)
-	var music_track = load("res://audio/music.wav")
+	var music_track = load("res://audio/music.ogg")
 	play_music(music_track)
 
 func play_music(music : AudioStream):
