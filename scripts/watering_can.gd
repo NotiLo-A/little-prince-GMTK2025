@@ -2,7 +2,9 @@ extends Sprite2D
 
 class_name WateringCan
 
-var water := 3
+@export var water_max := 3
+
+var water := water_max
 
 func interact(carried_item: Node) -> void:
 	print("interacted with watering can")
