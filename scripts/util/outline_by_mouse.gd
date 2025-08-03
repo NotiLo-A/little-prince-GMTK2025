@@ -11,6 +11,7 @@ func _ready() -> void:
 	$AnimationPlayer.seek(randf())
 
 func _process(_delta: float) -> void:
+	texture = parent.texture
 	$AnimationPlayer.speed_scale = cos(cos(Time.get_ticks_msec()))
 	var alpha: float = override_alpha_val
 	if !override_alpha:
