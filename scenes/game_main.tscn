@@ -2,13 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://dm83ckdhseocu" path="res://scenes/planet.tscn" id="1_hx1lv"]
 [ext_resource type="Texture2D" uid="uid://duv6rjcwodjb5" path="res://sprites/sky.png" id="2_5nfmu"]
-[ext_resource type="Texture2D" uid="uid://xshfhsqdpo4o" path="res://sprites/planet.png" id="2_57ec7"]
+[ext_resource type="PackedScene" uid="uid://cw6daa5jiawki" path="res://scenes/ui/hud.tscn" id="3_5nfmu"]
 
 [node name="Root" type="Node2D"]
 
 [node name="Planet" parent="." instance=ExtResource("1_hx1lv")]
 unique_name_in_owner = true
-texture = ExtResource("2_57ec7")
 
 [node name="Camera" type="Camera2D" parent="."]
 unique_name_in_owner = true
@@ -39,14 +38,4 @@ mouse_filter = 2
 texture = ExtResource("2_5nfmu")
 stretch_mode = 1
 
-[node name="UI" type="CanvasLayer" parent="."]
-
-[node name="ControlRoot" type="Control" parent="UI"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -1152.0
-offset_bottom = -648.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="HUD" parent="." instance=ExtResource("3_5nfmu")]
