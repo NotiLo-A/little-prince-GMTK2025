@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://jgoyt24fvgg5"]
 
 [ext_resource type="Texture2D" uid="uid://bes2qnrlmln5p" path="res://sprites/watering_can.png" id="1_cca2k"]
-[ext_resource type="Script" uid="uid://y2782p3g3lvy" path="res://scripts/interactive_area.gd" id="2_tm7oq"]
+[ext_resource type="Script" uid="uid://y2782p3g3lvy" path="res://scripts/util/interactive_area.gd" id="2_tm7oq"]
 
 [node name="WateringCan" type="Sprite2D" groups=["interactive"]]
 texture = ExtResource("1_cca2k")

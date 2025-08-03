@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://64a1vpwbdjqw" path="res://scenes/well.tscn" id="5_8dfcq"]
 [ext_resource type="Script" uid="uid://bvlr3hk7c2uy1" path="res://scripts/well.gd" id="6_3s4jt"]
 [ext_resource type="PackedScene" uid="uid://jgoyt24fvgg5" path="res://scenes/watering_can.tscn" id="7_m5dqw"]
-[ext_resource type="Script" uid="uid://ddqcfkxgv3bxc" path="res://scripts/watering_can.gd" id="8_8dfcq"]
+[ext_resource type="Script" path="res://scripts/watering_can.gd" id="8_8dfcq"]
 
 [node name="Planet" type="Sprite2D"]
 texture = ExtResource("1_48b8c")
