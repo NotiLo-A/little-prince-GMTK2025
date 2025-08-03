@@ -12,19 +12,17 @@ func _ready() -> void:
 	is_on_last_stage = false
 
 func interact(carried_item: Node) -> void:
-	if !carried_item is WateringCan:
-		return
+	if carried_item is WateringCan:
+		var wateringCan = carried_item as WateringCan
+		if wateringCan.water <= 0:
+			return
+		wateringCan.water -= 1
+		if index == 0:
+			GameStaticData.game_over("You overwatered the Rose!")
+		restore_state()
 
-	var wateringCan = carried_item as WateringCan
-	if wateringCan.water <= 0:
-		return
-
-	wateringCan.water -= 1
-
-	if index == 0:
-		GameStaticData.game_over("You overwatered the Rose!")
-
-	restore_state()
+	if carried_item is Hoe:
+		GameStaticData.game_over("You chopped the Rose! (why did you that?!)")
 
 func _on_off_screen_updater_on_highest_position() -> void:
 	GameStaticData.loop += 1
