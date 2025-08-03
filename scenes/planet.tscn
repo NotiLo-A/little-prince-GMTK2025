@@ -20,8 +20,9 @@ position = Vector2(0, -302)
 position = Vector2(70, -269)
 
 [node name="Well" parent="." instance=ExtResource("5_8dfcq")]
-position = Vector2(135, 241)
-rotation = 3.14159
+position = Vector2(141, 270)
+rotation = 2.61758
+scale = Vector2(1.02058, 1.02058)
 script = ExtResource("6_3s4jt")
 
 [node name="WateringCan" parent="." instance=ExtResource("7_m5dqw")]

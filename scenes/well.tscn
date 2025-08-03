@@ -1,14 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://64a1vpwbdjqw"]
 
-[ext_resource type="Texture2D" uid="uid://byg4u2a3bb2yk" path="res://sprites/well.png" id="1_rgtmi"]
-[ext_resource type="Script" uid="uid://y2782p3g3lvy" path="res://scripts/interactive_area.gd" id="2_dgxn0"]
+[ext_resource type="Texture2D" uid="uid://bnxwscvrsr6nc" path="res://sprites/well_2.png" id="1_rgtmi"]
+[ext_resource type="Script" uid="uid://y2782p3g3lvy" path="res://scripts/util/interactive_area.gd" id="2_dgxn0"]
 
 [node name="Well" type="Sprite2D" groups=["interactive"]]
 z_index = 1
+scale = Vector2(0.504202, 0.504202)
 texture = ExtResource("1_rgtmi")
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("2_dgxn0")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PackedVector2Array(-63, -23, -46, 25, -31, 51, 45, 6, 31, -38, 18, -65, -9, -63, -55, -38)
+polygon = PackedVector2Array(-59.5, -59.5, -59.5, 59.5, 35.7, 57.5167, 33.7167, -61.4833)
