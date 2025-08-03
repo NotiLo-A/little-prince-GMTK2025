@@ -1,4 +1,5 @@
 extends Sprite2D
 
 func interact(carried_item: Node) -> void:
-	print("interacted with well")
+	if carried_item is WateringCan:
+		carried_item.water = carried_item.water_max
