@@ -8,6 +8,7 @@
 
 [node name="Planet" parent="." instance=ExtResource("1_hx1lv")]
 unique_name_in_owner = true
+day_length = 10.0
 
 [node name="Camera" type="Camera2D" parent="."]
 unique_name_in_owner = true

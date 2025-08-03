@@ -11,7 +11,15 @@ func _ready() -> void:
 	is_on_last_stage = false
 
 func interact(carried_item: Node) -> void:
-	print("interacted with rose")
+	if !carried_item is WateringCan:
+		return
+
+	var wateringCan = carried_item as WateringCan
+	if wateringCan.water <= 0:
+		return
+
+	wateringCan.water -= 1
+	restore_state()
 
 func _on_off_screen_updater_on_highest_position() -> void:
 	if (is_on_last_stage):
@@ -20,11 +28,19 @@ func _on_off_screen_updater_on_highest_position() -> void:
 func _on_off_screen_updater_on_lowest_position() -> void:
 	dry()
 
-func dry():
-	index += 1
-	index = clamp(index, 0, textures.size() - 1);
+func restore_state():
+	change_state(-1)
 
-	is_on_last_stage = index >= textures.size() - 1
+func dry():
+	change_state(+1)
+
+func change_state(value: int):
+	index += value
+
+	var last_index = textures.size() - 1
+	index = clamp(index, 0, last_index);
+
+	is_on_last_stage = index >= last_index
 
 	sprite.texture = textures[index]
 
