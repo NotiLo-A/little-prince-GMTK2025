@@ -10,7 +10,7 @@ script = ExtResource("1_72k6w")
 sprout_sprite = NodePath("sprout")
 tree_sprite = NodePath("tree")
 slow_rate = 0.6
-change_to_grow = 0.0
+change_to_grow = 0.7
 
 [node name="sprout" type="Sprite2D" parent="."]
 position = Vector2(0, -36)
