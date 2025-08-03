@@ -48,4 +48,4 @@ func change_state(value: int):
 	sprite.texture = textures[index]
 
 func game_over():
-	get_tree().change_scene_to_file("res://scenes/ui/game_over_screen.tscn")
+	GameStaticData.game_over("Rose dried")
