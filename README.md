@@ -36,8 +36,7 @@ Made in 48 hours for **[GMTK Game Jam 2025](https://itch.io/jam/gmtk-2025)** on 
 
 https://itch.io/jam/gmtk-2025/rate/3780549
 
-> *Results will be posted after the rating period ends.*
-
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/4d7dfb16-713c-4d65-a411-7d8448578ca0" />
 
 ## ❤️ Comments
 
@@ -63,8 +62,6 @@ https://itch.io/jam/gmtk-2025/rate/3780549
     </td>
   </tr>
 </table>
-
----
 
 ## 🔗 Links
 
