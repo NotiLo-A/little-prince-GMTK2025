@@ -1,44 +1,34 @@
-# 🦊 The Little Prince
+### [PLAY](https://miniho.itch.io/the-little-prince)
+# The Little Prince
 
 > *A survival game made for GMTK Game Jam 2025 — Theme: **Loop***
 
 <img width="315" height="250" alt="image" src="https://github.com/user-attachments/assets/e5af63a7-2920-4c00-9401-003dc1566114" />
 
 
-## 🎮 About the Game
+## About the Game
 
 **The Little Prince** is a 2D survival game built in [Godot](https://godotengine.org/), inspired by Antoine de Saint-Exupéry's beloved story. You inhabit a tiny planet with the Little Prince himself — tending to it, surviving its loops, and keeping the world from falling apart.
 
 Made in 48 hours for **[GMTK Game Jam 2025](https://itch.io/jam/gmtk-2025)** on the theme **"Loop"**.
 
-
-## 🕹️ Play It
-
-▶️ **[Play on itch.io](https://miniho.itch.io/the-little-prince)**
-
-- **Platform:** HTML5 (runs in browser)
-- **Input:** Mouse
-- **Language:** English
-- **Session length:** A few minutes
-
-
-## 👥 Team
+## Team
 
 | Role | Name |
 |---|---|
-| 💻 Code | pvpsko, MihOi, Rapuska |
-| 🎨 Art | Yarovik |
-| 🎵 Music | Arazi |
-| 💛 Emotional Support | FriGMan |
+| Code | pvpsko, MihOi, Rapuska |
+| Art | Yarovik |
+| Music | Arazi |
+| Emotional Support | FriGMan |
 
 
-## 🏆 Jam Results
+## Jam Results
 
 https://itch.io/jam/gmtk-2025/rate/3780549
 
 <img width="300" alt="image" src="https://github.com/user-attachments/assets/4d7dfb16-713c-4d65-a411-7d8448578ca0" />
 
-## ❤️ Comments
+## Comments <3
 
 <table>
   <tr>
@@ -63,8 +53,7 @@ https://itch.io/jam/gmtk-2025/rate/3780549
   </tr>
 </table>
 
-## 🔗 Links
+## Links
 
-- 🎮 [Play on itch.io](https://miniho.itch.io/the-little-prince)
-- 💻 [Source Code (GitHub)](https://github.com/NotiLo-A/little-prince-GMTK2025)
-- 🎵 [Soundtrack](https://open.spotify.com/artist/4aKAtlm2NLlUPa1TjUvRF5?si=IUqsBuydSIy3R9ikWj_Hxw)
+-  [Play on itch.io](https://miniho.itch.io/the-little-prince)
+-  [Soundtrack](https://open.spotify.com/artist/4aKAtlm2NLlUPa1TjUvRF5?si=IUqsBuydSIy3R9ikWj_Hxw)
